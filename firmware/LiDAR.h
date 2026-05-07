@@ -4,24 +4,23 @@
 class LiDAR
 {
 private:
-    const static int MAX_SAMPLES = 50;
+    constexpr static int MAX_SAMPLES = 50;
 
-    const static int FRAME_SIZE = 9;
-    const static uint8_t FRAME_HEADER = 0x59;
+    constexpr static int FRAME_SIZE = 9;
+    constexpr static uint8_t FRAME_HEADER = 0x59;
 
-    const static int DEFAULT_BAUD_RATE = 115200;
-    const static int HIGH_BAUD_RATE = 921600;
+    constexpr static int DEFAULT_BAUD_RATE = 115200;
+    constexpr static int HIGH_BAUD_RATE = 921600;
 
-    const static int LIDAR_RX_PIN = 20;
-    const static int LIDAR_TX_PIN = 21;
+    constexpr static int LIDAR_RX_PIN = 20;
+    constexpr static int LIDAR_TX_PIN = 21;
+    constexpr static int SERIAL_DELAY_MS = 100;
 
-    const static int SERIAL_DELAY_MS = 100;
+    constexpr static int TARGET_SAMPLE_COUNT = 20;
 
-    const static int TARGET_SAMPLE_COUNT = 20;
-
-    const static float DISTANCE_SCALE = 1.5f;
-    const static float MAX_SIGNAL_STRENGTH = 65535.0f;
-    const static float SIGNAL_PERCENT_SCALE = 100.0f;
+    constexpr static float DISTANCE_SCALE = 1.5f;
+    constexpr static float MAX_SIGNAL_STRENGTH = 65535.0f;
+    constexpr static float SIGNAL_PERCENT_SCALE = 100.0f;
 
     uint8_t frame[FRAME_SIZE];
     int rxCount = 0;

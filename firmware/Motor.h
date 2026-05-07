@@ -4,19 +4,19 @@
 class Motor
 {
 private:
-    const static int DIR_PIN = 2;
-    const static int STEP_PIN = 3;
-    const static int SLP_PIN = 4;
-    const static int RST_PIN = 5;
-    const static int EN_PIN = 6;
-    const static int MS1_PIN = 7;
-    const static int MS2_PIN = 8;
-    const static int MS3_PIN = 9;
+    constexpr static int DIR_PIN = 2;
+    constexpr static int STEP_PIN = 3;
+    constexpr static int SLP_PIN = 4;
+    constexpr static int RST_PIN = 5;
+    constexpr static int EN_PIN = 6;
+    constexpr static int MS1_PIN = 7;
+    constexpr static int MS2_PIN = 8;
+    constexpr static int MS3_PIN = 9;
 
-    const static int DIRECTION_SETUP_DELAY_US = 5;
-    const static int STEP_PULSE_DELAY_US = 10;
+    constexpr static int DIRECTION_SETUP_DELAY_US = 5;
+    constexpr static int STEP_PULSE_DELAY_US = 10;
 
-    const static float HOME_ANGLE = 0.0f;
+    constexpr static float HOME_ANGLE = 0.0f;
 
     void setupPin(int pin)
     {

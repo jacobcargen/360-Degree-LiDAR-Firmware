@@ -153,6 +153,7 @@ public:
 
 void BLECommandHandler::onWrite(BLECharacteristic* ch)
 {
+    extern class Motor motor;
     String val = ch->getValue();
 
     if (val.length() == 0 )
@@ -167,7 +168,6 @@ void BLECommandHandler::onWrite(BLECharacteristic* ch)
         {
             ble.motorEnabled = true;
 
-            extern class Motor motor;
 
             motor.enable();
 
